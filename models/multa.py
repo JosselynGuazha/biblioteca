@@ -9,3 +9,5 @@ class Multa(models.Model):
 
     total_dias = fields.Integer('Fecha Inicio ')
     valor = fields.Float('Valor a Pagar de la Multa', (3, 2))
+
+    devolucion_id = fields.Many2one('biblioteca.devolucion', 'Devolución')

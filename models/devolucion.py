@@ -13,3 +13,5 @@ class Devolucion(models.Model):
         ('activo', 'Activo'),
         ('inactivo', 'Inactivo'),
     ], "Estado", readonly=True, default="inactivo")
+
+    multa_ids = fields.One2many('biblioteca.multa', 'devolucion_id', string="Multas")
