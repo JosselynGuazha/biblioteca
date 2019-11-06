@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <act_window id="menu_root"
+        name="Sistema Bibliotecario"
+        res_model="biblioteca.prestamo"
+        view_id="prestamo_biblioteca_form_view"
+        view_mode= "tree, form"/>
+
+    <menuitem id="biblioteca_menu_root" sequence="1" name="Biblioteca"/>
+
+    <menuitem id="biblioteca_menu_category" name="Administrar Biblioteca" parent="biblioteca_menu_root" sequence ="1"/>
+    <menuitem id="action_biblioteca_prestamo" sequence="1" name="Prestamo" parent="biblioteca_menu_category" action="action_biblioteca_prestamo"/>
+
+</odoo>
