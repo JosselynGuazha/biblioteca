@@ -10,3 +10,5 @@ class Informacion(models.Model):
     titulo = fields.Char('Título')
     nro_paginas = fields.Integer('Número de páginas')
     fecha_publicacion = fields.Date('Fecha de Publicación')
+
+    libro_id = fields.Many2one('biblioteca.libro', 'Libro')

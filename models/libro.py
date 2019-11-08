@@ -9,3 +9,5 @@ class Libro(models.Model):
 
     editorial = fields.Char('Editorial')
     genero = fields.Char('Género')
+
+    informacion_ids = fields.One2many('biblioteca.informacion', 'libro_id', string=" información del Libro")

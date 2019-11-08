@@ -10,5 +10,6 @@
 
     <menuitem id="biblioteca_menu_category" name="Administrar Biblioteca" parent="biblioteca_menu_root" sequence ="1"/>
     <menuitem id="action_biblioteca_prestamo" sequence="1" name="Prestamo" parent="biblioteca_menu_category" action="action_biblioteca_prestamo"/>
+    <menuitem id="action_biblioteca_libro" sequence="2" name="Libro" parent="biblioteca_menu_category" action="action_biblioteca_libro"/>
 
 </odoo>
