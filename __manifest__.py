@@ -28,6 +28,11 @@
         'views/prestamo_view.xml',
         'views/libro_view.xml',
         'views/informacion_view.xml',
+        'views/publicacion_view.xml',
+        'views/tesis_view.xml',
+        'views/periodico_view.xml',
+        'views/revista_view.xml',
+        'views/libro_cd_view.xml',
         'views/templates.xml',
         'views/menu_view.xml',
 

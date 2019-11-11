@@ -1,0 +1,43 @@
+<odoo>
+    <record id="periodico_biblioteca_form_view" model="ir.ui.view">
+
+        <field name="name">Biblioteca ISTLA</field>
+        <field name="model">biblioteca.periodico</field>
+        <field name="arch" type="xml">
+            <form string="Verificar el Periodico">
+                <header>
+
+                </header>
+                <sheeet>
+                    <separator string="Datos del Periodico"></separator>
+                    <group name="group_top">
+                        <field name="diario"/>
+                        <field name="informacion_ids"/>
+                    </group>
+                </sheeet>
+            </form>
+        </field>
+    </record>
+
+    <!-- El siguinete bloque de codigo es para colocar una tabla con todos los registroa ingresados-->
+    <record id="biblioteca.periodico_tree_view" model="ir.ui.view">
+        <field name="name">biblioteca.periodico.tree.view</field>
+        <field name="model">biblioteca.periodico</field>
+        <field name="arch" type="xml">
+            <tree string="Periodico">
+              <field name="diario"/>
+              <field name="informacion_ids"/>
+            </tree>
+        </field>
+
+    </record>
+    <record id="action_biblioteca_periodico" model="ir.actions.act_window">
+        <field name="name">Registro del Periodico</field>
+        <field name="res_model">biblioteca.periodico</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+
+    </record>
+
+
+</odoo>
