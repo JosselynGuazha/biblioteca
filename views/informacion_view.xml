@@ -11,9 +11,12 @@
                 <sheeet>
                     <separator string="Información de la publicación"></separator>
                     <group name="group_top">
-                            <field name="titulo"/>
-                            <field name="nro_paginas"/>
-                            <field name="fecha_publicacion"/>
+                        <field name="referencia"/>
+                        <field name="titulo"/>
+                        <field name="nro_paginas"/>
+                        <field name="fecha_publicacion"/>
+                        <field name="campo"/>
+
                     </group>
                 </sheeet>
             </form>
@@ -26,9 +29,11 @@
         <field name="model">biblioteca.informacion</field>
         <field name="arch" type="xml">
             <tree string="Informacion">
-              <field name="titulo"/>
-              <field name="nro_paginas"/>
-              <field name="fecha_publicacion"/>
+                <field name="referencia"/>
+                <field name="titulo"/>
+                <field name="nro_paginas"/>
+                <field name="fecha_publicacion"/>
+                <field name="campo"/>
             </tree>
         </field>
 

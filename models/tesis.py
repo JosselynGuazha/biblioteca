@@ -8,4 +8,8 @@ class Tesis(models.Model):
     _description = 'Tesis'
 
     director = fields.Char('Nombre del Director')
-    area = fields.Char('Area perteneciente de la Tesis')
+
+    informacion_ids = fields.One2many('biblioteca.informacion', 'tesis_id', string=" Información de la Tesis")
+
+    publicacion_id = fields.Many2one('biblioteca.publicacion', 'Publicacion')
+

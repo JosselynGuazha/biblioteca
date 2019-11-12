@@ -11,9 +11,9 @@
                 <sheeet>
                     <separator string="Datos del Libro"></separator>
                     <group name="group_top">
-                            <field name="editorial"/>
-                            <field name="genero"/>
-                            <field name="informacion_ids"/>
+                        <field name="editorial"/>
+                        <field name="imprenta"/>
+                        <field name="informacion_ids"/>
                     </group>
                 </sheeet>
             </form>
@@ -27,7 +27,7 @@
         <field name="arch" type="xml">
             <tree string="Libro">
                 <field name="editorial"/>
-                <field name="genero"/>
+                <field name="imprenta"/>
                 <field name="informacion_ids"/>
             </tree>
         </field>

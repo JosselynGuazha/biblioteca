@@ -8,6 +8,8 @@ class Libro(models.Model):
     _description = 'Libro'
 
     editorial = fields.Char('Editorial')
-    genero = fields.Char('Género')
+    imprenta = fields.Char('Imprenta')
 
     informacion_ids = fields.One2many('biblioteca.informacion', 'libro_id', string=" información del Libro")
+
+    publicacion_id = fields.Many2one('biblioteca.libro', 'Publicacion')
