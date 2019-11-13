@@ -12,7 +12,7 @@
                     <separator string="Datos de la Tesis"></separator>
                     <group name="group_top">
                         <field name="director"/>
-                        <field name="informacion_ids"/>
+
                     </group>
                 </sheeet>
             </form>
@@ -26,7 +26,7 @@
         <field name="arch" type="xml">
             <tree string="Tesis">
               <field name="director"/>
-              <field name="informacion_ids"/>
+
             </tree>
         </field>
 

@@ -27,7 +27,6 @@
         'views/views.xml',
         'views/prestamo_view.xml',
         'views/libro_view.xml',
-        'views/informacion_view.xml',
         'views/publicacion_view.xml',
         'views/tesis_view.xml',
         'views/periodico_view.xml',

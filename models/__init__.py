@@ -13,4 +13,4 @@ from . import libro_cd
 from . import tesis
 from . import periodico
 from . import revista
-from . import informacion
+

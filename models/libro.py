@@ -10,6 +10,5 @@ class Libro(models.Model):
     editorial = fields.Char('Editorial')
     imprenta = fields.Char('Imprenta')
 
-    informacion_ids = fields.One2many('biblioteca.informacion', 'libro_id', string=" información del Libro")
 
     publicacion_id = fields.Many2one('biblioteca.libro', 'Publicacion')

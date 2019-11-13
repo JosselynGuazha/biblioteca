@@ -12,6 +12,11 @@
                     <separator string="Información de la publicación"></separator>
                     <group name="group_top">
                         <field name="fecha_ingreso"/>
+                        <field name="referencia"/>
+                        <field name="titulo"/>
+                        <field name="nro_paginas"/>
+                        <field name="fecha_publicacion"/>
+                        <field name="campo"/>
                         <field name="tesis_ids"/>
                         <field name="libro_ids"/>
                         <field name="revista_ids"/>
@@ -30,13 +35,18 @@
         <field name="model">biblioteca.publicacion</field>
         <field name="arch" type="xml">
             <tree string="Publicacion">
-              <field name="fecha_ingreso"/>
-              <field name="tesis_ids"/>
-              <field name="libro_ids"/>
-              <field name="revista_ids"/>
-              <field name="periodico_ids"/>
-              <field name="libro_cd_ids"/>
-              <field name="autor_ids"/>
+                <field name="fecha_ingreso"/>
+                <field name="referencia"/>
+                <field name="titulo"/>
+                <field name="nro_paginas"/>
+                <field name="fecha_publicacion"/>
+                <field name="campo"/>
+                <field name="tesis_ids"/>
+                <field name="libro_ids"/>
+                <field name="revista_ids"/>
+                <field name="periodico_ids"/>
+                <field name="libro_cd_ids"/>
+                <field name="autor_ids"/>
             </tree>
         </field>
     </record>

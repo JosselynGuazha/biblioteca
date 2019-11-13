@@ -8,6 +8,11 @@ class Publicacion(models.Model):
     _description = 'Publicación'
 
     fecha_ingreso = fields.Date('Fecha de Ingreso')
+    referencia = fields.Char('Referencia')
+    titulo = fields.Char('Título')
+    nro_paginas = fields.Integer('Número de páginas')
+    fecha_publicacion = fields.Date('Fecha de Publicación')
+    campo = fields.Char('Campo')
 
     tesis_ids = fields.One2many('biblioteca.tesis', 'publicacion_id', string=" Información del tesis")
     libro_ids = fields.One2many('biblioteca.libro', 'publicacion_id', string=" Información del Libro")
