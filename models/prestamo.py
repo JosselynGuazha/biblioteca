@@ -9,3 +9,5 @@ class Prestamo(models.Model):
 
     fecha_inicio = fields.Date('Fecha Inicio ')
     fecha_fin = fields.Date('Fecha Fin')
+
+    servicio_id = fields.Many2one('biblioteca.prestamo', 'Prestamo')

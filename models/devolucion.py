@@ -15,3 +15,4 @@ class Devolucion(models.Model):
     ], "Estado", readonly=True, default="inactivo")
 
     multa_ids = fields.One2many('biblioteca.multa', 'devolucion_id', string="Multas")
+    servicio_id = fields.Many2one('biblioteca.devolucion', 'Devolucion')

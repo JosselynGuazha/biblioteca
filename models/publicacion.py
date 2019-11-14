@@ -21,3 +21,4 @@ class Publicacion(models.Model):
     libro_cd_ids = fields.One2many('biblioteca.libro_cd', 'publicacion_id', string=" Información del Libro CDs")
     autor_ids = fields.One2many('biblioteca.autor', 'publicacion_id', string=" Información del Autor")
 
+    servicio_id = fields.Many2one('biblioteca.publicacion', 'Servicio')
