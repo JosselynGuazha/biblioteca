@@ -11,7 +11,7 @@
                 <sheeet>
                     <separator string="Información del Servicio"></separator>
                     <group name="group_top">
-                        <field name="publicacion_ids"/>
+                        <field name="publicacion_id"/>
                         <field name="prestamo_ids"/>
                         <field name="devolucion_ids"/>
                         <field name="lector_ids"/>
@@ -27,7 +27,7 @@
         <field name="model">biblioteca.servicio</field>
         <field name="arch" type="xml">
             <tree string="Servicio">
-              <field name="publicacion_ids"/>
+              <field name="publicacion_id"/>
               <field name="prestamo_ids"/>
               <field name="devolucion_ids"/>
               <field name="lector_ids"/>

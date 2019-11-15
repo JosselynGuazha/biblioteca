@@ -9,7 +9,7 @@
 
                 </header>
                 <sheeet>
-                    <separator string="Datos de la Mula"></separator>
+                    <separator string="Datos de la Multa"></separator>
                     <group name="group_top">
                         <field name="total_dias"/>
                         <field name="valor"/>

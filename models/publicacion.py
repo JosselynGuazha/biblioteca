@@ -7,6 +7,14 @@ class Publicacion(models.Model):
     _name = 'biblioteca.publicacion'
     _description = 'Publicación'
 
+    @api.multi
+    def name_get(self):
+        result = []
+        for record in self:
+            name = '[' + record.titulo + ']'
+            result.append((record.id, name))
+        return result
+
     fecha_ingreso = fields.Date('Fecha de Ingreso')
     referencia = fields.Char('Referencia')
     titulo = fields.Char('Título')
@@ -21,4 +29,4 @@ class Publicacion(models.Model):
     libro_cd_ids = fields.One2many('biblioteca.libro_cd', 'publicacion_id', string=" Información del Libro CDs")
     autor_ids = fields.One2many('biblioteca.autor', 'publicacion_id', string=" Información del Autor")
 
-    servicio_id = fields.Many2one('biblioteca.publicacion', 'Servicio')
+    servicio_ids = fields.One2many('biblioteca.servicio', 'publicacion_id', string="Servicio")
