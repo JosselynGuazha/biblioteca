@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+
+<odoo>
+    <data noupdate="0">
+        <!--
+        Parte General de los grupos
+        -->
+        <record id="module_category_biblioteca" model="ir.module.category">
+            <field name="name">Biblioteca Institucional</field>
+            <field name="sequence">22</field>
+        </record>
+
+        <!--
+        Espacios para cada grupo
+        -->
+        <!-- Administrador -->
+        <record id="group_biblioteca_manager" model="res.groups">
+            <field name="name">Biblioteca Institucional / Administrador</field>
+            <field name="category_id" ref="module_category_biblioteca"></field>
+            <field name="users" eval="[(4,ref('base.user_root'))]"></field>
+        </record>
+        <!-- Docentes  -->
+        <record id="group_biblioteca_docentes" model="res.groups">
+            <field name="name">Biblioteca Institucional / Docente</field>
+            <field name="category_id" ref="module_category_biblioteca"></field>
+
+        </record>
+        <!-- Estudiantes  -->
+        <record id="group_biblioteca_estudiantes" model="res.groups">
+            <field name="name">Biblioteca Institucional / Estudiantes</field>
+            <field name="category_id" ref="module_category_biblioteca"></field>
+        </record>
+
+
+        <!-- Visitantes  -->
+        <record id="group_biblioteca_visitantes" model="res.groups">
+            <field name="name">Biblioteca Institucional / Visitantes</field>
+            <field name="category_id" ref="module_category_biblioteca"></field>
+        </record>
+
+        <!-- Biblioteca  -->
+        <record id="group_biblioteca_bibliotecario" model="res.groups">
+            <field name="name">Biblioteca Institucional / Bibliotecario</field>
+            <field name="category_id" ref="module_category_biblioteca"></field>
+        </record>
+
+    </data>
+</odoo>
