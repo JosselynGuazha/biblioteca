@@ -17,11 +17,12 @@
                         <field name="nro_paginas"/>
                         <field name="fecha_publicacion"/>
                         <field name="campo"/>
-                        <field name="tesis_ids"/>
-                        <field name="libro_ids"/>
-                        <field name="revista_ids"/>
-                        <field name="periodico_ids"/>
-                        <field name="libro_cd_ids"/>
+                        <field name="tipo_publicacion"/>
+                        <field name="libro_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'libro')]}"/>
+                        <field name="tesis_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'tesis')]}"/>
+                        <field name="revista_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'revista')]}"/>
+                        <field name="periodico_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'periodico')]}"/>
+                        <field name="libro_cd_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'libro_cd')]}"/>
                         <field name="autor_ids"/>
                     </group>
                 </sheeet>
@@ -35,18 +36,19 @@
         <field name="model">biblioteca.publicacion</field>
         <field name="arch" type="xml">
             <tree string="Publicacion">
-                <field name="fecha_ingreso"/>
-                <field name="referencia"/>
-                <field name="titulo"/>
-                <field name="nro_paginas"/>
-                <field name="fecha_publicacion"/>
-                <field name="campo"/>
-                <field name="tesis_ids"/>
-                <field name="libro_ids"/>
-                <field name="revista_ids"/>
-                <field name="periodico_ids"/>
-                <field name="libro_cd_ids"/>
-                <field name="autor_ids"/>
+              <field name="fecha_ingreso"/>
+              <field name="referencia"/>
+              <field name="titulo"/>
+              <field name="nro_paginas"/>
+              <field name="fecha_publicacion"/>
+              <field name="campo"/>
+              <field name="tipo_publicacion"/>
+            <!--  <field name="libro_id"/>
+              <field name="tesis_id"/>
+              <field name="revista_id"/>
+              <field name="periodico_id"/>
+              <field name="libro_cd_id"/> -->
+              <field name="autor_ids"/>
             </tree>
         </field>
     </record>
