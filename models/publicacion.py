@@ -15,6 +15,7 @@ class Publicacion(models.Model):
             result.append((record.id, name))
         return result
 
+    imagen = fields.Binary()
     fecha_ingreso = fields.Date('Fecha de Ingreso')
     referencia = fields.Char('Referencia')
     titulo = fields.Char('Título')
@@ -42,4 +43,3 @@ class Publicacion(models.Model):
     #periodico_ids = fields.One2many('biblioteca.periodico', 'publicacion_id', string=" Información del Periodico")
     #revista_ids = fields.One2many('biblioteca.revista', 'publicacion_id', string=" Información de la Revista")
     #libro_cd_ids = fields.One2many('biblioteca.libro_cd', 'publicacion_id', string=" Información del Libro CDs")
-

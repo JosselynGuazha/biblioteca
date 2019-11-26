@@ -25,6 +25,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
+        'views/usuarios_view.xml',
         'views/prestamo_view.xml',
         'views/libro_view.xml',
         'views/publicacion_view.xml',
@@ -34,7 +35,7 @@
         'views/libro_cd_view.xml',
         'views/autor_view.xml',
         'views/lector_view.xml',
-        'views/multa_view.xml',
+        'views/sancion_view.xml',
         'views/templates.xml',
         'views/menu_view.xml',
 

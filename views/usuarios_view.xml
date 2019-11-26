@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+
+<odoo>
+    <record id="usuarios_biblioteca_form_view" model="ir.ui.view">
+        <field name="name">biblioteca.usuarios.form.view</field>
+        <field name="model">biblioteca.usuarios</field>
+        <!--<field name="inherit_id" ref="base.view_users_form_simple_modif" />  esta linea agregue como prueba -->
+        <field name="arch" type="xml">
+                <form string="Formulario de usuarios">
+                  <header>
+                    <field name="state" widget="statusbar" statusbar_visible="usuarios,terminado" attrs="{'invisible':[('state','=','hecho')]}"/>
+                  </header>
+                    <sheet>
+                        <separator string="INFORMACIÓN DEL usuarios" />
+                        <field name="imagen" widget="image" class="oe_left oe_avatar" style="max-width:100px;max-height:117px;" />
+
+                        <div class="oe_title">
+                            <group>
+                                <field name="tipo_usuarios" nolabel="1" required="1" style="color:#898687" />
+                            </group>
+                            <group>
+                                <field name="name" placeholder="Nombres" nolabel="1" required="1" />
+                                <br />
+                                <field name="apellidos" placeholder="Apellidos" nolabel="1" />
+                                <br />
+                                <field name="pid" placeholder="Cedula/Correo" invisible="0" nolabel="1"/>
+                            </group>
+                        </div>
+
+                        <group name="group_top">
+                        <!--<separator string="Asignacion de usuarios y Clave" />
+                        <group name="group_left" string="Datos de la Cuenta">
+                                  <field name="user_id"/>
+                        </group> -->
+                          <group name="group_left" string="Datos Personales">
+                                  <field name="name"/>
+                                  <field name="apellidos"/>
+                                  <field name="cedula" data-inputmask="'mask': '9999999999'"/>
+                                  <field name="fecha_nacimiento"/>
+                                  <field name="anio"/>
+                                  <field name="email" placeholder="Correo electrónico" widget="email"/>
+                                  <field name="genero"/>
+                                  <field name="estado_civil"/>
+                          </group>
+                          <group name="group_right" string="Datos de la Dirección">
+                                  <field name="per_country_id"/>
+                                  <separator string="" />
+                                  <field name="ciudad"/>
+                                  <separator string="" />
+                                  <field name="direccion_domicilio"/>
+                                  <separator string="" />
+                                  <field name="telefono"/>
+                                  <separator string="" />
+                                  <field name="celular"/>
+                          </group>
+                        </group>
+
+                    </sheet>
+                </form>
+        </field>
+    </record>
+
+    <record id="biblioteca_usuarios_tree_view" model="ir.ui.view">
+      <field name="name">biblioteca.usuarios.tree.view</field>
+      <field name="model">biblioteca.usuarios</field>
+    <!--  <field name="inherit_id" ref="base.view_users_form_simple_modif" /> -->
+      <field name="arch" type="xml">
+          <tree string="Elementos del usuarios">
+            <field name="name"/>
+            <field name="apellidos"/>
+            <field name="cedula"/>
+            <field name="genero"/>
+            <field name="tipo_usuarios"/>
+          </tree>
+      </field>
+    </record>
+
+    <!-- vista search -->
+    <record id="biblioteca_usuarios_view_search" model="ir.ui.view">
+      <field name="name">biblioteca.search.view</field>
+      <field name="model">biblioteca.usuarios</field>
+      <field name="arch" type="xml">
+        <search string="Busqueda de Usuarios">
+              <field name="name" string="Name"/>
+              <field name="cedula" string="Cedula"/>
+              <field name="apellidos" string="Apellidos"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="action_biblioteca_usuarios" model="ir.actions.act_window">
+        <field name="name">Lista de usuarios</field>
+        <field name="res_model">biblioteca.usuarios</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+  <!--  <menuitem id="libreria_usuario_menu_category" name="usuarios" parent="libreria.libreria_menu_root" sequence="2" />
+    <menuitem id="action_libreria_usuario_menu" sequence="1" name="usuarios" parent="libreria_usuario_menu_category" action="action_libreria_usuario"/> -->
+</odoo>

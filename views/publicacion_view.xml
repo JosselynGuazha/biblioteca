@@ -12,7 +12,7 @@
                     <separator string="Información de la publicación"></separator>
                     <group name="group_top">
                         <group name="group_left">
-                            <field name="fecha_ingreso"/>
+                            <field name="imagen" widget="image" style="max-width:100px;max-height:117px;" />
                             <field name="referencia"/>
                             <field name="titulo"/>
                             <field name="tipo_publicacion"/>
@@ -23,7 +23,7 @@
                             <field name="libro_cd_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'libro_cd')]}"/>
                         </group>
                         <group name="group_right">
-
+                            <field name="fecha_ingreso"/>
                             <field name="nro_paginas"/>
                             <field name="fecha_publicacion"/>
                             <field name="campo"/>

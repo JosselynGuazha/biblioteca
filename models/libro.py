@@ -19,4 +19,4 @@ class Libro(models.Model):
     imprenta = fields.Char('Imprenta')
 
 
-    publicacion_id = fields.Many2one('biblioteca.libro', 'Publicacion')
+    #publicacion_id = fields.Many2one('biblioteca.libro', 'Publicacion')

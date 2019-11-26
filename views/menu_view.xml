@@ -10,7 +10,12 @@
 
     <menuitem id="biblioteca_menu_category" name="Administrar Biblioteca" parent="biblioteca_menu_root" sequence ="1"/>
     <menuitem id="action_biblioteca_publicacion" sequence="1" name="Publicacion" parent="biblioteca_menu_category" action="action_biblioteca_publicacion"/>
+
     <menuitem id="servicios_biblioteca_menu_category" name="Administrar Servicios" parent="biblioteca_menu_root" sequence ="2"/>
-    <menuitem id="action_biblioteca_prestamo" sequence="1" name="Prestamo" parent="servicios_biblioteca_menu_category" action="action_biblioteca_prestamo"/>
+    <menuitem id="action_biblioteca_prestamo" sequence="1" name="Préstamo" parent="servicios_biblioteca_menu_category" action="action_biblioteca_prestamo"/>
+    <menuitem id="action_biblioteca_sancion" sequence="2" name="Sanción" parent="servicios_biblioteca_menu_category" action="action_biblioteca_sancion"/>
+
+    <menuitem id="control_usuarios_menu_category" name="Control de usuarios" parent="biblioteca_menu_root" sequence ="3"/>
+    <menuitem id="action_biblioteca_usuarios" sequence="1" name="Usuarios" parent="control_usuarios_menu_category" action="action_biblioteca_usuarios"/>
 
 </odoo>

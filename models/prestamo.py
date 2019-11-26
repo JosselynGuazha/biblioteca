@@ -7,8 +7,7 @@ class Prestamo(models.Model):
     _name = 'biblioteca.prestamo'
     _description = 'Prestamo'
 
-    fecha_inicio = fields.Date('Fecha Inicio ')
+    fecha_inicio = fields.Date('Fecha Inicio')
     fecha_fin = fields.Date('Fecha Fin')
 
-
-    multa_id = fields.Many2one('biblioteca.prestamo', 'Prestamo')
+    publicacion_id = fields.Many2one('biblioteca.publicacion', 'Seleccione la publicacion')
