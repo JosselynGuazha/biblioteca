@@ -12,7 +12,6 @@
                     <separator string="Datos del CD Libro"></separator>
                     <group name="group_top">
                         <field name="nro_discos"/>
-
                     </group>
                 </sheeet>
             </form>
@@ -25,7 +24,7 @@
         <field name="model">biblioteca.libro_cd</field>
         <field name="arch" type="xml">
             <tree string="CD ibro">
-              <field name="nro_discos"/>
+                <field name="nro_discos"/>
 
             </tree>
         </field>

@@ -13,7 +13,6 @@
                     <group name="group_top">
                         <field name="editorial"/>
                         <field name="imprenta"/>
-
                     </group>
                 </sheeet>
             </form>

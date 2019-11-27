@@ -18,6 +18,10 @@ class Publicacion(models.Model):
     fecha_ingreso = fields.Date('Fecha de Ingreso')
     referencia = fields.Char('Referencia')
     titulo = fields.Char('Título')
+    estado = fields.Selection([
+        ('disponible', 'Disponible'),
+        ('prestado', 'Prestado'),
+    ], "Estado", default="disponible")
     nro_paginas = fields.Integer('Número de páginas')
     fecha_publicacion = fields.Date('Fecha de Publicación')
     campo = fields.Char('Campo')
@@ -39,4 +43,3 @@ class Publicacion(models.Model):
     #revista_ids = fields.One2many('biblioteca.revista', 'publicacion_id', string=" Información de la Revista")
     #libro_cd_ids = fields.One2many('biblioteca.libro_cd', 'publicacion_id', string=" Información del Libro CDs")
 
-    servicio_ids = fields.One2many('biblioteca.servicio', 'publicacion_id', string="Servicio")

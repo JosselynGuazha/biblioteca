@@ -33,8 +33,6 @@
         'views/revista_view.xml',
         'views/libro_cd_view.xml',
         'views/autor_view.xml',
-        'views/devolucion_view.xml',
-        'views/servicio_view.xml',
         'views/lector_view.xml',
         'views/multa_view.xml',
         'views/templates.xml',

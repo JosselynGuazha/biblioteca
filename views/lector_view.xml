@@ -11,10 +11,14 @@
                 <sheeet>
                     <separator string="Datos del Lector"></separator>
                     <group name="group_top">
-                        <field name="nombres"/>
-                        <field name="apellidos"/>
-                        <field name="telefono"/>
-                        <field name="direccion"/>
+                        <group name="group_left">
+                            <field name="nombres"/>
+                            <field name="apellidos"/>
+                            <field name="direccion"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="telefono"/>
+                        </group>
                     </group>
                 </sheeet>
             </form>
@@ -27,10 +31,10 @@
         <field name="model">biblioteca.lector</field>
         <field name="arch" type="xml">
             <tree string="Lector">
-              <field name="nombres"/>
-              <field name="apellidos"/>
-              <field name="telefono"/>
-              <field name="direccion"/>
+                <field name="nombres"/>
+                <field name="apellidos"/>
+                <field name="telefono"/>
+                <field name="direccion"/>
             </tree>
         </field>
 

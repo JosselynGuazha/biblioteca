@@ -11,9 +11,10 @@
                 <sheeet>
                     <separator string="Datos de la Multa"></separator>
                     <group name="group_top">
-                        <field name="total_dias"/>
-                        <field name="valor"/>
-
+                        <group name="group_left">
+                            <field name="total_dias"/>
+                            <field name="valor"/>
+                        </group>
                     </group>
                 </sheeet>
             </form>
@@ -26,8 +27,8 @@
         <field name="model">biblioteca.multa</field>
         <field name="arch" type="xml">
             <tree string="Multa">
-              <field name="total_dias"/>
-              <field name="valor"/>
+                <field name="total_dias"/>
+                <field name="valor"/>
 
             </tree>
         </field>

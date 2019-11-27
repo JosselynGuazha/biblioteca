@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 
 from . import models
-from . import servicio
 from . import publicacion
 from . import multa
 from . import prestamo
-from . import devolucion
 from . import lector
 from . import autor
 from . import libro

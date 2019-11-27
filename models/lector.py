@@ -12,4 +12,4 @@ class Lector(models.Model):
     telefono = fields.Char('Numero de Telefono')
     direccion = fields.Char('Direccion')
 
-    servicio_id = fields.Many2one('biblioteca.lector', 'Lector')
+    #servicio_id = fields.Many2one('biblioteca.lector', 'Lector')
