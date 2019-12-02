@@ -13,7 +13,9 @@
                     <group name="group_top">
                         <field name="fecha_inicio"/>
                         <field name="fecha_fin"/>
+                        <field name="estado"/>
                         <field name="publicacion_id"/>
+                        <field name="user_id"/>
                     </group>
 
 
@@ -30,7 +32,9 @@
             <tree string="Prestamo">
                 <field name="fecha_inicio"/>
                 <field name="fecha_fin"/>
+                <field name="estado"/>
                 <field name="publicacion_id"/>
+                <field name="user_id"/>
             </tree>
         </field>
     </record>

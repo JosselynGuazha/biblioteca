@@ -11,12 +11,12 @@ class Publicacion(models.Model):
     def name_get(self):
         result = []
         for record in self:
-            name = '[' + record.titulo + ']'
+            name = record.titulo + " de " + record.autor_ids.nombres + " " + record.autor_ids.apellidos
             result.append((record.id, name))
         return result
 
     imagen = fields.Binary()
-    fecha_ingreso = fields.Date('Fecha de Ingreso')
+    fecha_ingreso = fields.Date('Fecha de Ingreso', default=fields.Date.context_today, readonly=True) 
     referencia = fields.Char('Referencia')
     titulo = fields.Char('Título')
     estado = fields.Selection([

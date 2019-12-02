@@ -9,6 +9,8 @@
         <field name="arch" type="xml">
                 <form string="Formulario de usuarios">
                   <header>
+                    <!-- <field name="state" widget="statusbar"/> -->
+                    <!-- <field name="state" widget="statusbar" statusbar_visible="usuarios,terminado"/> -->
                     <field name="state" widget="statusbar" statusbar_visible="usuarios,terminado" attrs="{'invisible':[('state','=','hecho')]}"/>
                   </header>
                     <sheet>
@@ -17,7 +19,7 @@
 
                         <div class="oe_title">
                             <group>
-                                <field name="tipo_usuarios" nolabel="1" required="1" style="color:#898687" />
+                              <field name="tipo_usuarios" nolabel="1" required="1" style="color:#898687" />
                             </group>
                             <group>
                                 <field name="name" placeholder="Nombres" nolabel="1" required="1" />

@@ -118,11 +118,8 @@ class Usuarios(models.Model):
     celular = fields.Char(string="Telefono Celular")
     ciudad = fields.Char(string="Ciudad")
     state = fields.Selection([('borrador', 'Borrador'),
-
                               ('terminado', 'Terminado'),
-                              ('cancelar', 'Cancelar')
-                              ],
-                             'State', readonly=True, default="borrador")
+                              ('cancelar', 'Cancelar')], string='State', required=True, default="borrador",  track_visibility='onchange')
     # probando estas características
     direccion_domicilio = fields.Char(string="Direccion Domiciliaria")
     anio = fields.Integer(compute='_compute_student_age', string='Años')
