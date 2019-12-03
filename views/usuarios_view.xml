@@ -9,8 +9,9 @@
         <field name="arch" type="xml">
                 <form string="Formulario de usuarios">
                   <header>
-                    <!-- <field name="state" widget="statusbar"/> -->
-                    <!-- <field name="state" widget="statusbar" statusbar_visible="usuarios,terminado"/> -->
+                    <button name="set_to_borrador" string="Borrador" class="oe_highlight" type="object"/>
+                    <button name="set_terminado" string="Terminado" class="oe_highlight" type="object"/>
+                    <button name="cancel_registro" string="Cancelar" type="object"/>
                     <field name="state" widget="statusbar" statusbar_visible="usuarios,terminado" attrs="{'invisible':[('state','=','hecho')]}"/>
                   </header>
                     <sheet>

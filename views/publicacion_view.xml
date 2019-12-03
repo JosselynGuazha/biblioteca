@@ -27,7 +27,6 @@
                             <field name="nro_paginas"/>
                             <field name="fecha_publicacion"/>
                             <field name="campo"/>
-                            <field name="estado"/>
                         </group>
                         <field name="autor_ids"/>
                     </group>
@@ -49,7 +48,6 @@
                 <field name="fecha_publicacion"/>
                 <field name="campo"/>
                 <field name="tipo_publicacion"/>
-                <field name="estado"/>
                 <!--  <field name="libro_id"/>
                   <field name="tesis_id"/>
                   <field name="revista_id"/>

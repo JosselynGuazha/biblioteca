@@ -11,8 +11,8 @@ class Prestamo(models.Model):
     fecha_fin = fields.Date('Fecha Fin')
     estado = fields.Selection([('solicitado', 'Solicitado'),
                               ('prestado', 'Prestado'),
-                              ('devuelto', 'Devuelto')],
-                              string='Estado', required=True, default="solicitado",
+                              ('disponible', 'Disponible')],
+                              string='Estado', required=True, default="disponible",
                               track_visibility='onchange')
     #estado solicitado, prestado devuelto
     user_id = fields.Many2one(
@@ -23,3 +23,18 @@ class Prestamo(models.Model):
     )
 
     publicacion_id = fields.Many2one('biblioteca.publicacion', 'Seleccione la publicacion')
+
+    @api.multi
+    def set_to_solicitado(self):
+        '''Method to change state to draft'''
+        self.write({'estado': 'solicitado'})
+
+    @api.multi
+    def set_to_prestado(self):
+        '''Method to change state to draft'''
+        self.write({'estado': 'prestado'})
+
+    @api.multi
+    def set_to_disponible(self):
+        '''Method to change state to draft'''
+        self.write({'estado': 'disponible'})

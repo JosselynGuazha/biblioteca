@@ -16,13 +16,9 @@ class Publicacion(models.Model):
         return result
 
     imagen = fields.Binary()
-    fecha_ingreso = fields.Date('Fecha de Ingreso', default=fields.Date.context_today, readonly=True) 
+    fecha_ingreso = fields.Date('Fecha de Ingreso', default=fields.Date.context_today, readonly=True)
     referencia = fields.Char('Referencia')
     titulo = fields.Char('Título')
-    estado = fields.Selection([
-        ('disponible', 'Disponible'),
-        ('prestado', 'Prestado'),
-    ], "Estado", default="disponible")
     nro_paginas = fields.Integer('Número de páginas')
     fecha_publicacion = fields.Date('Fecha de Publicación')
     campo = fields.Char('Campo')

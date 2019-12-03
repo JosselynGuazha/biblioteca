@@ -5,15 +5,18 @@
         <field name="model">biblioteca.prestamo</field>
         <field name="arch" type="xml">
             <form string="Servicio de Prestamo Bibliotecario">
-                <header>
-
-                </header>
+              <header>
+                <button name="set_to_disponible" string="Disponible" class="oe_highlight" type="object" groups="biblioteca.group_biblioteca_manager"/>
+                <button name="set_to_prestado" string="Prestado" class="oe_highlight" type="object" groups="biblioteca.group_biblioteca_manager"/>
+                <button name="set_to_solicitado" string="Solicitado" class="oe_highlight" type="object"/>
+                <button name="set_to_disponible" string="Cancelar" type="object"/>
+                <field name="estado" widget="statusbar" statusbar_visible="usuarios,terminado" attrs="{'invisible':[('estado','=','hecho')]}"/>
+              </header>
                 <sheeet>
                     <separator string="Datos del Prestamo Bibliotecario"></separator>
                     <group name="group_top">
                         <field name="fecha_inicio"/>
                         <field name="fecha_fin"/>
-                        <field name="estado"/>
                         <field name="publicacion_id"/>
                         <field name="user_id"/>
                     </group>
@@ -32,9 +35,9 @@
             <tree string="Prestamo">
                 <field name="fecha_inicio"/>
                 <field name="fecha_fin"/>
-                <field name="estado"/>
                 <field name="publicacion_id"/>
                 <field name="user_id"/>
+                <field name="estado"/>
             </tree>
         </field>
     </record>
