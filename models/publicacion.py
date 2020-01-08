@@ -24,7 +24,7 @@ class Publicacion(models.Model):
     campo = fields.Char('Campo')
     tipo_publicacion = fields.Selection([('libro', 'Libro'), ('periodico', 'Periódico'), ('revista', 'Revista'), ('tesis', 'Tesis'),('libro_cd', 'Libro CD')],
     string='Seleccione el tipo de publicación', required=True, track_visibility='onchange')
-
+    estado = fields.Char('Estado', readonly=True, default='disponible')
 
     libro_id = fields.Many2one('biblioteca.libro', 'Ingrese información adicional para el libro')
     tesis_id = fields.Many2one('biblioteca.tesis', 'Ingrese información adicional para la tesis')

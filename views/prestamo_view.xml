@@ -17,8 +17,8 @@
                     <group name="group_top">
                         <field name="fecha_inicio"/>
                         <field name="fecha_fin"/>
-                        <field name="publicacion_id"/>
-                        <field name="user_id"/>
+                        <field name="publicacion_id" domain="[('estado','=','disponible')]"/>
+                        <field name="user_id" domain="[('user_id', '=', 'valor')]"/>
                     </group>
 
 
@@ -45,6 +45,7 @@
         <field name="name">Registro de Prestamo</field>
         <field name="res_model">biblioteca.prestamo</field>
         <field name="type">ir.actions.act_window</field>
+        <field name="domain">[('user_id','=', context.get('uid'))]</field>
         <field name="view_mode">tree,form</field>
 
     </record>
