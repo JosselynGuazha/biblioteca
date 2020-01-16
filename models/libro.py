@@ -11,7 +11,7 @@ class Libro(models.Model):
     def name_get(self):
         result = []
         for record in self:
-            name = '[' + record.editorial + ', ' + record.imprenta + ']'
+            name = 'Editorial: ' + record.editorial + ', Imprenta: ' + record.imprenta
             result.append((record.id, name))
         return result
 

@@ -1,18 +1,18 @@
 <odoo>
     <record id="publicacion_biblioteca_form_view" model="ir.ui.view">
-
         <field name="name">Biblioteca ISTLA</field>
         <field name="model">biblioteca.publicacion</field>
         <field name="arch" type="xml">
-        <form string="Verificar la Publicacion" >
+        <form string="Verificar la Publicacion">
                 <header>
 
                 </header>
                 <sheeet>
                     <separator string="Información de la publicación"></separator>
-                    <group name="group_top">
-                        <group name="group_left">
-                            <field name="imagen" widget="image" style="max-width:100px;max-height:117px;" attrs="{'readonly':[('uid', '!=', 1)]}"/>
+              <!--      <group name="group_top">
+                    <group name="group_left">
+                            <field name="grupo"/>
+                            <field name="imagen" widget="image" style="max-width:100px;max-height:117px;" attrs="{'readonly':[('grupo', '!=', 0)]}"/>
                             <field name="referencia" attrs="{'readonly':[('uid', '!=', 1)]}"/>
                             <field name="titulo" attrs="{'readonly':[('uid', '!=', 1)]}"/>
                             <field name="tipo_publicacion" attrs="{'readonly':[('uid', '!=', 1)]}"/>
@@ -30,18 +30,46 @@
                             <field name="estado" attrs="{'readonly':[('uid', '!=', 1)]}"/>
                         </group>
                         <field name="autor_ids" attrs="{'readonly':[('uid', '!=', 1)]}"/>
+                    </group> -->
+
+                    <group name="group_top">
+                    <group name="group_left">
+                            <field name="is_administrador" invisible="1"/>
+                            <field name="is_bibliotecario" invisible="1"/>
+                            <field name="imagen" widget="image" style="max-width:100px;max-height:117px;" attrs="{'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="referencia" attrs="{'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="titulo" attrs="{'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="tipo_publicacion" attrs="{'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="libro_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'libro')], 'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="tesis_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'tesis')], 'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="revista_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'revista')], 'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="periodico_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'periodico')], 'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="libro_cd_id" attrs="{'invisible':[('tipo_publicacion', '!=', 'libro_cd')], 'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                        </group>
+                        <group name="group_right">
+                            <field name="fecha_ingreso" />
+                            <field name="nro_paginas" attrs="{'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="fecha_publicacion" attrs="{'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="campo" attrs="{'readonly':[('is_administrador', '=', False), ('is_bibliotecario', '=', False)]}"/>
+                            <field name="estado"/>
+                        </group>
+                        <field name="autor_ids"/>
                     </group>
+
                 </sheeet>
             </form>
         </field>
     </record>
 
-    <!-- El siguinete bloque de codigo es para colocar una tabla con todos los registroa ingresados-->
+  <!--   El siguinete bloque de codigo es para colocar una tabla con todos los registroa ingresados-->
     <record id="biblioteca.publicacion_tree_view" model="ir.ui.view">
         <field name="name">biblioteca.publicacion.tree.view</field>
         <field name="model">biblioteca.publicacion</field>
         <field name="arch" type="xml">
             <tree string="Publicacion">
+            <!--    <field name="is_administrador"/>
+                <field name="is_bibliotecario"/> -->
+                <field name="imagen"/>
                 <field name="fecha_ingreso"/>
                 <field name="referencia"/>
                 <field name="titulo"/>
@@ -49,7 +77,7 @@
                 <field name="fecha_publicacion"/>
                 <field name="campo"/>
                 <field name="tipo_publicacion"/>
-                <field name="estado"/>
+                <field name="estado" />
                 <!--  <field name="libro_id"/>
                   <field name="tesis_id"/>
                   <field name="revista_id"/>

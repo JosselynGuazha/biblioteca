@@ -11,7 +11,7 @@ class Revista(models.Model):
     def name_get(self):
         result = []
         for record in self:
-            name = '[ Editorial: ' + record.editorial +  ']'
+            name = 'Editorial: ' + record.editorial
             result.append((record.id, name))
         return result
 

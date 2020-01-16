@@ -11,7 +11,7 @@ class Periodico(models.Model):
     def name_get(self):
         result = []
         for record in self:
-            name = '[ Diario: ' + record.diario + ']'
+            name = 'Diario: ' + record.diario
             result.append((record.id, name))
         return result
 

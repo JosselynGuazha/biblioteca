@@ -28,6 +28,7 @@
         'views/views.xml',
         'views/usuarios_view.xml',
         'views/prestamo_view.xml',
+        'views/prestamo_bibliotecario_view.xml',
         'views/libro_view.xml',
         'views/publicacion_view.xml',
         'views/tesis_view.xml',

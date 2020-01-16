@@ -12,7 +12,8 @@
     <menuitem id="accion_biblioteca_publicacion" sequence="1" name="Publicacion" parent="biblioteca_menu_category" action="action_biblioteca_publicacion"/>
 
     <menuitem id="servicios_biblioteca_menu_category" name="Administrar Servicios" parent="biblioteca_menu_root" sequence ="2"/>
-    <menuitem id="accion_biblioteca_prestamo" sequence="1" name="Préstamo" parent="servicios_biblioteca_menu_category" action="action_biblioteca_prestamo"/>
+    <menuitem id="accion_biblioteca_prestamo" sequence="1" name="Préstamo" parent="servicios_biblioteca_menu_category" action="action_biblioteca_prestamo" groups="biblioteca.group_biblioteca_estudiantes,biblioteca.group_biblioteca_docentes"/>
+    <menuitem id="accion_bibliotecario_prestamo" sequence="1" name="Préstamos de publicaciones" parent="servicios_biblioteca_menu_category" action="action_bibliotecario_prestamo" groups="biblioteca.group_biblioteca_manager,biblioteca.group_biblioteca_bibliotecario"/>
     <menuitem id="accion_biblioteca_sancion" sequence="2" name="Sanción" parent="servicios_biblioteca_menu_category" action="action_biblioteca_sancion"/>
 
     <menuitem id="control_usuarios_menu_category" name="Control de usuarios" parent="biblioteca_menu_root" sequence ="3"/>

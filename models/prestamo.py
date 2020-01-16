@@ -7,10 +7,10 @@ class Prestamo(models.Model):
     _name = 'biblioteca.prestamo'
     _description = 'Prestamo'
 
-    def _obtener_usuario(self):
-        self.valor = self.env.context.get('uid')
+    #def _obtener_usuario(self):
+    #    self.valor = self.env.context.get('uid')
 
-    @api.model
+    """ @api.model
     def prestamo_libro(self):
         #pdb.set_trace()
         lista = self.env['biblioteca.publicacion']
@@ -21,7 +21,7 @@ class Prestamo(models.Model):
             for publicacion in lista:
                 if publicacion.id != prestamo.publicacion_id:
                     lista3.append(publicacion.id)
-        return lista3
+        return lista3 """
         #return publicacion_id = lista3
 
 
@@ -42,15 +42,13 @@ class Prestamo(models.Model):
                               string='Estado', required=True, default="disponible",
                               track_visibility='onchange')
     #estado solicitado, prestado devuelto
-    valor = fields.Char(compute='_obtener_usuario')
+    #valor = fields.Char(compute='_obtener_usuario')
     user_id = fields.Many2one(
         comodel_name='res.users',
         string='Solicitante',
-        default=lambda self: self.env.user.id,
-        readonly=True
+        default=lambda self: self.env.user.id
     )
     publicacion_id = fields.Many2one('biblioteca.publicacion', 'Seleccione la publicacion')
-
 
     @api.multi
     def set_to_solicitado(self):
@@ -64,6 +62,7 @@ class Prestamo(models.Model):
         '''Method to change state to draft'''
         self.write({'estado': 'prestado'})
         self.publicacion_id.write({'estado': 'prestado'})
+
 
     @api.multi
     def set_to_disponible(self):
